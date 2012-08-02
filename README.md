@@ -1,3 +1,5 @@
+# NOTE: use this as a starting point of a styleguide for coffescript apps based on [Mozaic](https://github.com/uberVU/mozaic)
+
 # CoffeeScript Style Guide
 
 This guide presents a collection of best-practices and coding conventions for the [CoffeeScript][coffeescript] programming language.
