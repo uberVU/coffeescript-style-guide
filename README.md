@@ -144,7 +144,7 @@ Additional recommendations:
 <a name="comments"/>
 ## Comments
 
-# Note! 
+### Note! 
 
 Comments are senteces and as such the first word should start with capital letter!
 
