@@ -144,6 +144,10 @@ Additional recommendations:
 <a name="comments"/>
 ## Comments
 
+# Note! 
+
+Comments are senteces and as such the first word should start with capital letter!
+
 If modifying code that is described by an existing comment, update the comment such that it accurately reflects the new code. (Ideally, improve the code to obviate the need for the comment, and delete the comment entirely.)
 
 The first word of the comment should be capitalized, unless the first word is an identifier that begins with a lower-case letter.
