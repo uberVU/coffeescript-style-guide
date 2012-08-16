@@ -50,7 +50,7 @@ The details in this guide have been very heavily inspired by several existing st
 <a name="tabs_or_spaces"/>
 ### Tabs or Spaces?
 
-Use **spaces only**, with **2 spaces** per indentation level. Never mix tabs and spaces.
+Use **spaces only**, with **4 spaces** per indentation level. Never mix tabs and spaces.
 
 <a name="maximum_line_length"/>
 ### Maximum Line Length
@@ -154,6 +154,13 @@ The first word of the comment should be capitalized, unless the first word is an
 
 If a comment is short, the period at the end can be omitted.
 
+Always write a comment to complement the code, the comment should not state the obvious, the code itselft should be self-explanatory.
+
+    ```coffeescript
+        # sets the value of x to 1
+        x = 1
+    ```
+
 <a name="block_comments"/>
 ### Block Comments
 
@@ -239,7 +246,7 @@ bar = -> # Yes
 bar = () -> # No
 ```
 
-In cases where method calls are being chained and the code does not fit on a single line, each call should be placed on a separate line and indented by one level (i.e., two spaces), with a leading `.`.
+In cases where method calls are being chained and the code does not fit on a single line, each call should be placed on a separate line and indented by one level (i.e., four spaces), with a leading `.`.
 
 ```coffeescript
 [1..3]
@@ -421,7 +428,10 @@ If a custom annotation is required, the annotation should be documented in the p
 
 `not` is preferred over `!`.
 
+`isnt` is preferred over `!=`.
+
 `or=` should be used when possible:
+
 
 ```coffeescript
 temp or= {} # Yes
