@@ -146,7 +146,7 @@ Additional recommendations:
 
 ### Note! 
 
-Comments are senteces and as such the first word should start with capital letter!
+Comments are senteces and as such the first word should start with capital letter! Also, as sentences, they should end with a dot.
 
 If modifying code that is described by an existing comment, update the comment such that it accurately reflects the new code. (Ideally, improve the code to obviate the need for the comment, and delete the comment entirely.)
 
