@@ -195,6 +195,28 @@ However, inline comments can be useful in certain scenarios:
   x = x + 1 # Compensate for border
 ```
 
+### Function and Method Comments
+
+Always comment functions inside the body of the function, right after function definition, using block comments.
+
+Describe parameters and return values of the function using the format defined in [js styleguides for google closure compiler](https://developers.google.com/closure/compiler/docs/js-for-compiler)
+
+````coffeescript
+    extractLanguagesFromParams: (event) ->
+        ###
+            Extract the languages data from the received jquery event. 
+            The raw data path is 'language/total'
+
+            @param {Object} event Event received on the /analytics
+                                  channel
+
+            @return {Hash} A dictionary of this form:
+                            { "portuguese": 10, 
+                              "english": 5 }
+        ###
+````
+
+
 <a name="naming_conventions"/>
 ## Naming Conventions
 
