@@ -79,17 +79,32 @@ UTF-8 is the preferred source file encoding.
 <a name="module_imports"/>
 ## Module Imports
 
+[Mozaic.js](github.com/ubervu/mozaic) uses [require.js]() for dependency management and module loading.
+When creating a module, the `define` statement should be on the top of the file, before everything else, say comments.
+Each module required should be placed _on a separate lines in an alphabetical order_. Where needed, modules should be grouped in the following order:
+
 If using a module system (CommonJS Modules, AMD, etc.), `require` statements should be placed on separate lines.
 
-```coffeescript
-require 'lib/setup'
-Backbone = require 'backbone'
-```
-These statements should be grouped in the following order:
+1. Import needed third party librarys
+2. Import Mozaic core modules
+3. Import application level modules
 
-1. Standard library imports _(if a standard library exists)_
-2. Third party library imports
-3. Local imports _(imports specific to this application or library)_
+If needed (eg. when topping 80 character/line) the variables exposed by each module should be placed on separate lines as well.
+
+````coffeescript
+define [
+    'cs!libs/lib1'
+    'cs!libs/lib2'
+
+    'cs!core/module1'
+    'cs!core/module2'
+
+    'cs!app/mymodule1'
+    'cs!app/mymodule2'
+], (Lib1, Lib2, Module1, Module2, MyModule1, MyModule2) ->
+    # Awesome code
+
+````
 
 <a name="whitespace"/>
 ## Whitespace in Expressions and Statements
@@ -144,7 +159,7 @@ Additional recommendations:
 <a name="comments"/>
 ## Comments
 
-### Note! 
+### Note!
 
 Comments are senteces and as such the first word should start with capital letter! Also, as sentences, they should end with a dot.
 
@@ -215,14 +230,14 @@ Describe parameters and return values of the function using the format defined i
 ````coffeescript
     extractLanguagesFromParams: (event) ->
         ###
-            Extract the languages data from the received jquery event. 
+            Extract the languages data from the received jquery event.
             The raw data path is 'language/total'
 
             @param {Object} event Event received on the /analytics
                                   channel
 
             @return {Hash} A dictionary of this form:
-                            { "portuguese": 10, 
+                            { "portuguese": 10,
                               "english": 5 }
         ###
 ````
