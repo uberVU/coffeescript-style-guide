@@ -79,17 +79,17 @@ UTF-8 is the preferred source file encoding.
 <a name="module_imports"/>
 ## Module Imports
 
-[Mozaic.js](github.com/ubervu/mozaic) uses [require.js]() for dependency management and module loading.
-When creating a module, the `define` statement should be on the top of the file, before everything else, say comments.
-Each module required should be placed _on a separate lines in an alphabetical order_. Where needed, modules should be grouped in the following order:
+[Mozaic.js](http://github.com/ubervu/mozaic) uses [require.js](http://requirejs.org) for dependency management and module loading.
 
-If using a module system (CommonJS Modules, AMD, etc.), `require` statements should be placed on separate lines.
+When creating a module, the `define` statement should be the first statement in the file, before everything else, say comments.
+
+Each module required should be placed _on a separate line in an alphabetical order_. Where needed, modules should be grouped in the following order:
 
 1. Import needed third party librarys
 2. Import Mozaic core modules
 3. Import application level modules
 
-If needed (eg. when topping 80 character/line) the variables exposed by each module should be placed on separate lines as well.
+_Note_ If needed (eg. when topping 80 character/line) the variables exposed by each module should be placed on separate lines as well.
 
 ````coffeescript
 define [
