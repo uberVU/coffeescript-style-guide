@@ -81,9 +81,9 @@ UTF-8 is the preferred source file encoding.
 
 [Mozaic.js](http://github.com/ubervu/mozaic) uses [require.js](http://requirejs.org) for dependency management and module loading.
 
-When creating a module, the `define` statement should be the first statement in the file, before everything else, say comments.
+When creating a module, the `define` call should be the first statement in the file, before everything else, even comments.
 
-Each module required should be placed _on a separate line in an alphabetical order_. Where needed, modules should be grouped in the following order:
+Each module required should be placed _on a separate line and in alphabetical order_. Where needed, modules should be grouped in the following order:
 
 1. Import needed third party librarys
 2. Import Mozaic core modules
